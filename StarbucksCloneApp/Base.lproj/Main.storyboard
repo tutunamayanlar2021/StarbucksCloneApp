@@ -195,16 +195,14 @@
                                                         <constraint firstAttribute="height" constant="300" id="aPE-md-uWa"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Günün İçeçeği" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n11-2e-YIC">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Günün İçeçeği" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n11-2e-YIC">
                                                     <rect key="frame" x="30" y="321" width="354" height="23"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="NotoSansKannada-Bold" family="Noto Sans Kannada" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVD-9F-rj1">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVD-9F-rj1">
                                                     <rect key="frame" x="30" y="367" width="354" height="81.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <string key="text">Bold espressocascades throughlight, fluffylayers of foam,topped with adrizzle of caramel.
 </string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -213,9 +211,15 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="n11-2e-YIC" firstAttribute="leading" secondItem="l5G-XI-NBm" secondAttribute="leadingMargin" constant="10" id="8Vc-bY-gf7"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="IVD-9F-rj1" secondAttribute="trailing" constant="10" id="96a-mH-4mc"/>
                                                 <constraint firstItem="Li8-cE-pVM" firstAttribute="leading" secondItem="l5G-XI-NBm" secondAttribute="leadingMargin" id="XYo-Ue-Ajo"/>
                                                 <constraint firstItem="Li8-cE-pVM" firstAttribute="trailing" secondItem="l5G-XI-NBm" secondAttribute="trailingMargin" id="fBq-OJ-4KQ"/>
                                                 <constraint firstItem="Li8-cE-pVM" firstAttribute="top" secondItem="l5G-XI-NBm" secondAttribute="topMargin" id="gCy-Sz-t29"/>
+                                                <constraint firstItem="IVD-9F-rj1" firstAttribute="top" secondItem="n11-2e-YIC" secondAttribute="bottom" constant="23" id="ipf-Pi-jTt"/>
+                                                <constraint firstItem="IVD-9F-rj1" firstAttribute="leading" secondItem="l5G-XI-NBm" secondAttribute="leadingMargin" constant="10" id="p5T-u2-eE2"/>
+                                                <constraint firstItem="n11-2e-YIC" firstAttribute="top" secondItem="Li8-cE-pVM" secondAttribute="bottom" constant="10" id="s9k-qP-eV3"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="n11-2e-YIC" secondAttribute="trailing" constant="10" id="uWv-Av-lVF"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
