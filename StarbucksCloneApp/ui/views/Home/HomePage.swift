@@ -28,11 +28,7 @@ class HomePage: UIViewController{
         configureButton(buttonQr, y: 712,x:260,title: "Scan QR",rds: 30,height: 65,width : 135, backgroundColor: UIColor(named: "starbucksGreen") ?? UIColor.systemPink,fontColor: UIColor.white,fontSize:20)
         configureButton(buttonCount, y: 705,x:330, title: "₺0.00",rds: 15,height: 30, width : 65,backgroundColor: UIColor.white,fontColor: UIColor.black, fontSize:12 )
         
-        
-        view.addSubview(button)
-        view.addSubview(buttonQr)
-        view.addSubview(buttonCount)
-        // buttonCount.sizeToFit()
+    
         homeTableView.delegate = self
         homeTableView.dataSource = self
         
@@ -57,6 +53,7 @@ class HomePage: UIViewController{
         button.layer.cornerRadius = radius
         applyShadow(to: button)
         button.frame = CGRect(x: x, y: y, width: width, height: height)
+        view.addSubview(button)
     }
     
     func applyShadow(to view: UIView ) {
@@ -146,8 +143,9 @@ extension HomePage: UITableViewDelegate, UITableViewDataSource{
 
 //MARK: - UIScrollViewDelegate
 extension HomePage: UIScrollViewDelegate {
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
+    
         let y = scrollView.contentOffset.y
         let shouldSnap = y > 30
         let labelHeight = headerView.frame.height + 16
