@@ -31,7 +31,7 @@ class HomePage: UIViewController{
     
         homeTableView.delegate = self
         homeTableView.dataSource = self
-        
+   
         addWavyBadge(to: messageButton!)
         
         homeTableView.showsVerticalScrollIndicator = false

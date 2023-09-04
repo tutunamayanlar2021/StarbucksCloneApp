@@ -12,18 +12,175 @@
         <!--Menu-->
         <scene sceneID="Gv9-fx-TSF">
             <objects>
-                <viewController id="BcV-DW-Y9m" sceneMemberID="viewController">
+                <viewController id="BcV-DW-Y9m" customClass="Menu" customModule="StarbucksCloneApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="awu-Kl-f6O">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="iGe-Cj-3O3">
+                                <rect key="frame" x="0.0" y="154" width="414" height="30"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pfm-K4-KXl">
+                                        <rect key="frame" x="0.0" y="0.0" width="103.5" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sy6-wM-lMw">
+                                                <rect key="frame" x="0.0" y="0.0" width="103.5" height="25"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Menu"/>
+                                                <connections>
+                                                    <action selector="menuButtonTapped:" destination="BcV-DW-Y9m" eventType="touchUpInside" id="RIX-H1-psj"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Sy6-wM-lMw" firstAttribute="top" secondItem="pfm-K4-KXl" secondAttribute="top" id="3X4-59-q0y"/>
+                                            <constraint firstAttribute="trailing" secondItem="Sy6-wM-lMw" secondAttribute="trailing" id="CLh-7x-yjN"/>
+                                            <constraint firstItem="Sy6-wM-lMw" firstAttribute="leading" secondItem="pfm-K4-KXl" secondAttribute="leading" id="Wmu-v5-MFn"/>
+                                            <constraint firstAttribute="bottom" secondItem="Sy6-wM-lMw" secondAttribute="bottom" constant="5" id="ncK-l0-iFQ"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HPA-Bg-ZV8">
+                                        <rect key="frame" x="103.5" y="0.0" width="103.5" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LP9-Yn-bJ8">
+                                                <rect key="frame" x="0.0" y="0.0" width="103.5" height="30"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Featured"/>
+                                                <connections>
+                                                    <action selector="menuButtonTapped:" destination="BcV-DW-Y9m" eventType="touchUpInside" id="Te4-5N-Djo"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="LP9-Yn-bJ8" firstAttribute="top" secondItem="HPA-Bg-ZV8" secondAttribute="top" id="Cwx-IK-8IH"/>
+                                            <constraint firstAttribute="bottom" secondItem="LP9-Yn-bJ8" secondAttribute="bottom" id="Tob-Gf-lKe"/>
+                                            <constraint firstAttribute="trailing" secondItem="LP9-Yn-bJ8" secondAttribute="trailing" id="VAt-RH-LMW"/>
+                                            <constraint firstItem="LP9-Yn-bJ8" firstAttribute="leading" secondItem="HPA-Bg-ZV8" secondAttribute="leading" id="fcp-CJ-bj2"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GAl-or-gWf">
+                                        <rect key="frame" x="207" y="0.0" width="103.5" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uID-0o-jM6">
+                                                <rect key="frame" x="0.0" y="0.0" width="103.5" height="30"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Favorites"/>
+                                                <connections>
+                                                    <action selector="menuButtonTapped:" destination="BcV-DW-Y9m" eventType="touchUpInside" id="EMe-Aj-neb"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="uID-0o-jM6" secondAttribute="bottom" id="clg-Cv-kp6"/>
+                                            <constraint firstAttribute="trailing" secondItem="uID-0o-jM6" secondAttribute="trailing" id="dRb-TP-vCy"/>
+                                            <constraint firstItem="uID-0o-jM6" firstAttribute="leading" secondItem="GAl-or-gWf" secondAttribute="leading" id="fY8-bp-5bg"/>
+                                            <constraint firstItem="uID-0o-jM6" firstAttribute="top" secondItem="GAl-or-gWf" secondAttribute="top" id="gte-iU-bhd"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mDj-BC-GtH">
+                                        <rect key="frame" x="310.5" y="0.0" width="103.5" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A2Y-oc-gV7">
+                                                <rect key="frame" x="0.0" y="0.0" width="103.5" height="30"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Order"/>
+                                                <connections>
+                                                    <action selector="menuButtonTapped:" destination="BcV-DW-Y9m" eventType="touchUpInside" id="Azf-sY-VCH"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="A2Y-oc-gV7" secondAttribute="trailing" id="6cC-Sd-ELA"/>
+                                            <constraint firstItem="A2Y-oc-gV7" firstAttribute="leading" secondItem="mDj-BC-GtH" secondAttribute="leading" id="Yzb-T4-QiH"/>
+                                            <constraint firstAttribute="bottom" secondItem="A2Y-oc-gV7" secondAttribute="bottom" id="eUa-AZ-RQQ"/>
+                                            <constraint firstItem="A2Y-oc-gV7" firstAttribute="top" secondItem="mDj-BC-GtH" secondAttribute="top" id="yE8-B6-x7z"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="starbucksGreen"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="uIj-h0-psd"/>
+                                </constraints>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YgG-A7-80w">
+                                <rect key="frame" x="0.0" y="184" width="414" height="629"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MenuCell" id="zNG-oM-ODu" customClass="MenuCell" customModule="StarbucksCloneApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zNG-oM-ODu" id="chL-RJ-lxd">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VQs-gm-SlC">
+                                                    <rect key="frame" x="20" y="11" width="86" height="58"/>
+                                                    <color key="tintColor" systemColor="tintColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="86" id="ht4-8p-Yu9"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQF-tt-qVZ">
+                                                    <rect key="frame" x="106" y="30" width="278" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="xQF-tt-qVZ" firstAttribute="centerY" secondItem="chL-RJ-lxd" secondAttribute="centerY" id="1tP-vJ-dbK"/>
+                                                <constraint firstItem="VQs-gm-SlC" firstAttribute="bottom" secondItem="chL-RJ-lxd" secondAttribute="bottomMargin" id="BAz-i9-Mn0"/>
+                                                <constraint firstItem="VQs-gm-SlC" firstAttribute="leading" secondItem="chL-RJ-lxd" secondAttribute="leadingMargin" id="rck-ko-zCb"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="xQF-tt-qVZ" secondAttribute="trailing" constant="10" id="tfh-iU-8qy"/>
+                                                <constraint firstItem="VQs-gm-SlC" firstAttribute="top" secondItem="chL-RJ-lxd" secondAttribute="topMargin" id="twe-Sl-qRd"/>
+                                                <constraint firstItem="xQF-tt-qVZ" firstAttribute="leading" secondItem="VQs-gm-SlC" secondAttribute="trailing" id="xDe-e1-zR4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <connections>
+                                            <outlet property="menuTableViewImage" destination="VQs-gm-SlC" id="Zc8-ZY-inu"/>
+                                            <outlet property="menuTableViewLabel" destination="xQF-tt-qVZ" id="Odg-TW-Dkq"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="CAO-zd-gKx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iGe-Cj-3O3" firstAttribute="leading" secondItem="CAO-zd-gKx" secondAttribute="leading" id="6XC-Ao-vb6"/>
+                            <constraint firstItem="iGe-Cj-3O3" firstAttribute="top" secondItem="CAO-zd-gKx" secondAttribute="top" constant="10" id="8eZ-Bl-Nfc"/>
+                            <constraint firstItem="CAO-zd-gKx" firstAttribute="trailing" secondItem="YgG-A7-80w" secondAttribute="trailing" id="L58-MT-XPi"/>
+                            <constraint firstItem="CAO-zd-gKx" firstAttribute="trailing" secondItem="iGe-Cj-3O3" secondAttribute="trailing" id="YMI-Y8-Ul2"/>
+                            <constraint firstItem="YgG-A7-80w" firstAttribute="top" secondItem="iGe-Cj-3O3" secondAttribute="bottom" id="cYv-TY-Mgv"/>
+                            <constraint firstItem="CAO-zd-gKx" firstAttribute="bottom" secondItem="YgG-A7-80w" secondAttribute="bottom" id="d7d-f1-mLE"/>
+                            <constraint firstItem="YgG-A7-80w" firstAttribute="leading" secondItem="CAO-zd-gKx" secondAttribute="leading" id="dat-8h-pif"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Menu" id="xb0-Rj-RDc"/>
+                    <connections>
+                        <outlet property="menuTableView" destination="YgG-A7-80w" id="9cS-3K-0Xx"/>
+                        <outletCollection property="menuBottomConstrain" destination="ncK-l0-iFQ" collectionClass="NSMutableArray" id="pvM-pB-75n"/>
+                        <outletCollection property="menuBottomConstrain" destination="Tob-Gf-lKe" collectionClass="NSMutableArray" id="fGb-kO-7d9"/>
+                        <outletCollection property="menuBottomConstrain" destination="clg-Cv-kp6" collectionClass="NSMutableArray" id="OLP-ic-3kb"/>
+                        <outletCollection property="menuBottomConstrain" destination="eUa-AZ-RQQ" collectionClass="NSMutableArray" id="ur3-eJ-hY3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u8w-9i-81J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3173.2824427480914" y="-30.281690140845072"/>
+            <point key="canvasLocation" x="3172.4637681159425" y="-30.803571428571427"/>
         </scene>
         <!--Gift-->
         <scene sceneID="YKF-Gd-ir6">
@@ -260,8 +417,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UZQ-T1-bG4" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Menu" image="arrow.up.bin.fill" catalog="system" id="ho1-iO-WGT"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FQq-0I-26H">
-                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="FQq-0I-26H">
+                        <rect key="frame" x="0.0" y="48" width="414" height="104.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -341,11 +498,17 @@
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="s1" width="560" height="467"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
+        <namedColor name="starbucksGreen">
+            <color red="0.041999999433755875" green="0.65700000524520874" blue="0.38199999928474426" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="starbucksGrey">
             <color red="0.62400001287460327" green="0.62300002574920654" blue="0.62000000476837158" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
